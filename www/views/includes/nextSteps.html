@@ -6,7 +6,14 @@
   </div>
   <div ng-show="!hide">
     <div ng-repeat="service in services track by $index">
-      <a ui-sref="{{service.sref}}" class="item item-sub item-icon-left item-big-icon-left item-icon-right next-step">
+      <a class="item item-sub item-icon-left item-big-icon-left item-icon-right next-step" ng-if="service.name == 'aib-web-site'" ng-href="{{service.sref}}">
+        <i class="icon big-icon-svg">
+          <div class="bg {{service.icon}}"></div>
+        </i>
+        <span>{{service.title || service.name}}</span>
+        <i class="icon bp-arrow-right"></i>
+      </a>
+      <a ui-sref="{{service.sref}}" class="item item-sub item-icon-left item-big-icon-left item-icon-right next-step" ng-if="service.name !== 'aib-web-site'">
         <i class="icon big-icon-svg">
           <div class="bg {{service.icon}}"></div>
         </i>
