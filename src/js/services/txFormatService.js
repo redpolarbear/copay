@@ -19,7 +19,8 @@ angular.module('copayApp.services').factory('txFormatService', function($filter,
 
   root.formatAmountStr = function(coin, satoshis) {
     if (isNaN(satoshis)) return;
-    return root.formatAmount(satoshis) + ' ' + (coin).toUpperCase();
+    // return root.formatAmount(satoshis) + ' ' + (coin).toUpperCase();
+    return root.formatAmount(satoshis) + ' ' + 'AIB';
   };
 
   root.toFiat = function(coin, satoshis, code, cb) {
