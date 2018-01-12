@@ -5,7 +5,7 @@ angular.module('copayApp.services').factory('aibService', function(nextStepsServ
   var nextStepItem = {
     name: 'aib-web-site',
     title: 'Visit AIB Website',
-    icon: 'icon-amazon', // TODO: change to AIB icon
+    icon: 'icon-aib', // TODO: change to AIB icon
     sref: 'https://www.aib.one'
   };
 
